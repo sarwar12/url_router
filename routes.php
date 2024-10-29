@@ -1,11 +1,8 @@
 <?php 
-Route::get('/', function(){
-    echo "Welcome";
-});
+require "Router.php";
+use OurApplication\Routing\Router;
 
-Route::get('/say/{name}', function($name){
-    echo "Welcome {$name}";
+Router::get('/', function(){
+    echo "Welcome Home";
 });
-
-Route::get('/hello/world', 'HelloController@sayHelloWorld');
 
